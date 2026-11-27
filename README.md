@@ -381,4 +381,4 @@ Current state: https://interview-voice-sjp.fly.dev runs on a trial account, whic
 
 ## GitHub
 
-The repository is private at https://github.com/siddharth-jp-lab/interview-voice. `.github/workflows/build.yml` runs `npm ci` and `npm run build` on Node 22 for every push and pull request. It does not deploy and needs no secrets. Publishing steps are in [docs/GITHUB.md](docs/GITHUB.md).
+The repository is public at https://github.com/siddharth-jp-lab/interview-voice. `.github/workflows/build.yml` runs `npm ci` and `npm run build` on Node 22 for every push and pull request. It does not deploy and needs no secrets. Publishing steps are in [docs/GITHUB.md](docs/GITHUB.md).
