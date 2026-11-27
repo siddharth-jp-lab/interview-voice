@@ -1,0 +1,13 @@
+{
+  "name": "interview-voice",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "server": "node server/index.js",
+    "dev": "vite --config web/vite.config.js",
+    "build": "vite build --config web/vite.config.js"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}

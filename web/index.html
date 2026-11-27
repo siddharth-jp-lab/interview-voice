@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interview</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <section id="login" class="card signin">
+      <h1>Interview</h1>
+      <p class="lede">One question at a time. Interrupt whenever you want.</p>
+      <form id="login-form">
+        <label>
+          Email
+          <input id="email" name="email" type="email" autocomplete="username" required />
+        </label>
+        <label>
+          Passphrase
+          <input id="passphrase" name="passphrase" type="password" autocomplete="current-password" required />
+        </label>
+        <button id="signin" type="submit">Sign in</button>
+        <p id="login-status"></p>
+      </form>
+    </section>
+    <main id="app" hidden>
+      <header class="top">
+        <p id="who"></p>
+        <button id="signout" class="text" type="button">Sign out</button>
+      </header>
+      <aside id="sessions" class="card">
+        <h2>Past</h2>
+        <div id="session-list"></div>
+      </aside>
+      <div class="workspace">
+        <div class="switch" role="tablist">
+          <button id="tab-skills" type="button" role="tab" aria-selected="true">Skills</button>
+          <button id="tab-conversation" type="button" role="tab" aria-selected="false">Conversation</button>
+        </div>
+        <section id="skills-card" class="card" role="tabpanel">
+          <div class="card-head">
+            <h2>Skills</h2>
+            <button id="practice" type="button" disabled>Practice</button>
+          </div>
+          <p id="skill-summary"></p>
+          <div id="trees"></div>
+          <form id="topic-form">
+            <input id="topic" maxlength="120" placeholder="Add a topic" autocomplete="off" />
+            <button id="add-topic" type="submit">Add</button>
+          </form>
+          <p id="research-status"></p>
+        </section>
+        <section id="conversation" class="card" role="tabpanel" hidden>
+          <div class="stage">
+            <div id="orb" class="orb" data-state="idle">
+              <button id="start" class="orb-label" type="button">Start</button>
+            </div>
+            <p id="caption"></p>
+            <p id="status">Ready</p>
+            <div class="call-actions">
+              <button id="mute" class="text" type="button" disabled>Mute</button>
+              <button id="end" class="text danger" type="button" disabled>End</button>
+            </div>
+          </div>
+          <div id="thread">
+            <div id="transcript"></div>
+            <div id="debrief" hidden></div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
